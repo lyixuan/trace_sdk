@@ -144,7 +144,7 @@
 
   addScript(`${SERVER_HOST}/trace/PathMap.js`);
   window.onload = onloadEvent;
+  window.xd = xd;
   window.addEventListener('click', pathChange);
   window.addEventListener('click', clickEvent);
-  window.xd = xd;
 }(window));
