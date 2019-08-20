@@ -93,10 +93,6 @@
     return result;
   };
 
-  function addScript(url){
-    document.write("<script language=javascript src="+url+"></script>");
-  }
-
   let fetchSend = function (sendData) {
     delete sendData.project;
     delete sendData.pathname;
@@ -116,8 +112,6 @@
       xdconfig = options;
     }
   };
-  // addScript('http://172.16.59.247:14206/pathMap.js');
-  addScript(`${SERVER_HOST}/trace/pathMap.js`);
   window.onload=onloadEvent;
   window.addEventListener('click',pathChange);
   window.addEventListener('click',clickEvent);
