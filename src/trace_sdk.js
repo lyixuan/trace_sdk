@@ -14,8 +14,6 @@
     document.write("<script language=javascript src="+url+"></script>");
   }
 
-  addScript(`${SERVER_HOST}/trace/PathMap.js`);
-
   addScript(`${SERVER_HOST}/trace/BuryPointHandler.js`);
 
 }(window));
