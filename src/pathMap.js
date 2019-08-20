@@ -123,7 +123,7 @@ const UrlWhiteList = [
   {
     widgetName:'每月绩效',
     traceName:'每月绩效',
-    traceUrl:'/achievement/indexPage/boss/month'
+    traceUrl:'/achievement/indexPage/boss/monthly'
   },
   {
     widgetName:'绩效分档',

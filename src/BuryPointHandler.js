@@ -1,6 +1,15 @@
 ;(function(window){
   'use strict';
 
+  const dev = 'http://test.xd.admin.ministudy.com';
+  const pro = 'http://bd.ministudy.com';
+  let SERVER_HOST = {
+    [dev]: dev,
+    [pro]: pro,
+  }[window.location.origin];
+
+  if(!SERVER_HOST) SERVER_HOST=dev;
+
   let xdconfig = null;
 
   let onloadEvent = function () {
@@ -91,7 +100,7 @@
   let fetchSend = function (sendData) {
     delete sendData.project;
     delete sendData.pathname;
-    fetch('http://test.xd.admin.ministudy.com/inspectorapis/trace/add', {
+    fetch(`${SERVER_HOST}/inspectorapis/trace/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=UTF-8"
@@ -107,7 +116,8 @@
       xdconfig = options;
     }
   };
-  addScript('http://172.16.59.247:37225/LocationHandler/pathMap.js');
+  // addScript('http://172.16.59.247:14206/pathMap.js');
+  addScript(`${SERVER_HOST}/trace/pathMap.js`);
   window.onload=onloadEvent;
   window.addEventListener('click',pathChange);
   window.addEventListener('click',clickEvent);
