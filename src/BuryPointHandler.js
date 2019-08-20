@@ -55,7 +55,7 @@
     const widgetName = '';
     const origin = window.location.origin;
     const pathname = window.location.pathname;
-    postDataBtn(origin, pathname, traceName, widgetName);
+    // postDataBtn(origin, pathname, traceName, widgetName);
   };
 
 
