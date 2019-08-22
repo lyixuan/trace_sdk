@@ -111,6 +111,7 @@
   let fetchSend = function (sendData) {
     delete sendData.project;
     delete sendData.pathname;
+    alert(JSON.stringify(sendData))
     // fetch(`${SERVER_HOST}/inspectorapis/trace/add`, {
     fetch(`http://172.16.58.18:8086/trace/add`, {
       method: "POST",
@@ -118,6 +119,8 @@
         "Content-Type": "application/json;charset=UTF-8"
       },
       body: JSON.stringify(sendData)
+    }).then((res)=>{
+      alert(JSON.stringify(res))
     }).catch(function (e) {
       console.error("fetch fail", JSON.stringify(e));
     });
