@@ -13,7 +13,6 @@
   function addScript(url){
     document.write("<script language=javascript src="+url+"></script>");
   }
-
   addScript(`${SERVER_HOST}/trace/BuryPointHandler.js`);
 
 }(window));
