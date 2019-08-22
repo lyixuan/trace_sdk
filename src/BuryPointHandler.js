@@ -22,8 +22,10 @@
     postDataPage(origin, pathname);
     if (xdconfig && xdconfig.site === 2) {
       xdconfig.pathname = window.location.pathname;
+      alert(11)
       setInterval(function () {
         if (isPathChanged()) {
+          alert(22)
           const origin = window.location.origin;
           const pathname = window.location.pathname;
           xdconfig.pathname = window.location.pathname;
