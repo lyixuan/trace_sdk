@@ -50,6 +50,7 @@
 
 
   let postDataPage = function (origin, pathname) {
+    alert(1)
     if (!isInList(pathname)) return;
     const sendData = {
       traceType: 200,
