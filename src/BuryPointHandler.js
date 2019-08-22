@@ -19,6 +19,7 @@
     if (!origin || !pathname) {
       return;
     }
+    alert(88)
     postDataPage(origin, pathname);
     if (xdconfig && xdconfig.site === 2) {
       xdconfig.pathname = window.location.pathname;
