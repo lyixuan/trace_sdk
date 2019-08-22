@@ -121,6 +121,7 @@
   let fetchSend = function (sendData) {
     delete sendData.project;
     delete sendData.pathname;
+    alert(111,JSON.stringify(sendData));
     fetch(`${SERVER_HOST}/inspectorapis/trace/add`, {
       method: "POST",
       headers: {
