@@ -1,7 +1,7 @@
 ;(function (window) {
   'use strict';
 
-  const dev = 'http://test.xd.admin.ministudy.com';
+  const dev = 'http://172.16.58.18:8086';
   const pro = 'http://bd.ministudy.com';
   let SERVER_HOST = {
     [dev]: dev,
@@ -111,8 +111,7 @@
   let fetchSend = function (sendData) {
     delete sendData.project;
     delete sendData.pathname;
-    // fetch(`${SERVER_HOST}/inspectorapis/trace/add`, {
-    fetch(`http://172.16.58.18:8086/trace/add`, {
+    fetch(`${SERVER_HOST}/inspectorapis/trace/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=UTF-8"
