@@ -55,6 +55,10 @@
 
   let postDataPage = function (origin, pathname) {
     if (!isInList(pathname)) return;
+
+    if(xdconfig.project==='achievement'){
+      xdconfig.userId = achievement();
+    }
     const sendData = {
       traceType: 200,
       traceUrl: origin + pathname,
@@ -63,6 +67,12 @@
     };
 
     fetchSend(sendData);
+  };
+
+  let achievement = function () {
+    const userInfo = localStorage.getItem('performanceCurrentAuth');
+    const userId = JSON.parse(userInfo)?JSON.parse(userInfo).value.id:null;
+    return userId;
   };
 
   let postDataBtn = function (origin, pathname, traceName, widgetName) {
