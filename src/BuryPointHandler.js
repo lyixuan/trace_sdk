@@ -20,7 +20,7 @@
       return;
     }
     if (xdconfig && !xdconfig.userId){
-      sleep(1000);
+      sleep(2000);
       window.location.reload();
     }
     postDataPage(origin, pathname);
