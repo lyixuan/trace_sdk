@@ -11,7 +11,6 @@
   if (!SERVER_HOST) SERVER_HOST = dev;
 
   let xdconfig = null;
-
   let onloadEvent = function () {
     // 页面统计
     const origin = window.location.origin;
@@ -19,14 +18,11 @@
     if (!origin || !pathname) {
       return;
     }
-    alert(88)
     postDataPage(origin, pathname);
     if (xdconfig && xdconfig.site === 2) {
       xdconfig.pathname = window.location.pathname;
-      alert(11)
       setInterval(function () {
         if (isPathChanged()) {
-          alert(22)
           const origin = window.location.origin;
           const pathname = window.location.pathname;
           xdconfig.pathname = window.location.pathname;
@@ -53,7 +49,6 @@
 
 
   let postDataPage = function (origin, pathname) {
-    alert(1)
     if (!isInList(pathname)) return;
     const sendData = {
       traceType: 200,
@@ -115,7 +110,6 @@
   let fetchSend = function (sendData) {
     delete sendData.project;
     delete sendData.pathname;
-    alert(JSON.stringify(sendData))
     // fetch(`${SERVER_HOST}/inspectorapis/trace/add`, {
     fetch(`http://172.16.58.18:8086/trace/add`, {
       method: "POST",
@@ -124,7 +118,6 @@
       },
       body: JSON.stringify(sendData)
     }).then((res)=>{
-      alert(JSON.stringify(res))
     }).catch(function (e) {
       console.error("fetch fail", JSON.stringify(e));
     });
