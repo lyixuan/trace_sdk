@@ -11,6 +11,7 @@
   if (!SERVER_HOST) SERVER_HOST = dev;
 
   let xdconfig = null;
+
   let onloadEvent = function () {
     // 页面统计
     const origin = window.location.origin;
@@ -110,8 +111,7 @@
   let fetchSend = function (sendData) {
     delete sendData.project;
     delete sendData.pathname;
-    // fetch(`${SERVER_HOST}/inspectorapis/trace/add`, {
-    fetch(`http://172.16.58.18:8086/trace/add`, {
+    fetch(`${SERVER_HOST}/inspectorapis/trace/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=UTF-8"
@@ -129,13 +129,10 @@
       xdconfig = options;
     }
   };
-
   window.onload = onloadEvent;
   window.xd = xd;
-  console.log(1,window.xd)
   window.addEventListener('click', pathChange);
   window.addEventListener('click', clickEvent);
-
   var UrlWhiteList = [
     {
       widgetName:'新质检单管理',
