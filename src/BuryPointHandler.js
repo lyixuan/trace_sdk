@@ -2,10 +2,15 @@
   'use strict';
 
   const dev = 'http://172.16.109.87:28086';
-  const pro = 'http://bd.ministudy.com';
+  const pro = 'http://bd.ministudy.com/inspectorapis';
+  const pro1 = 'http://bd.ministudy.com';
+  const pro2 = 'http://test-api.bd.ministudy.com';
+  const pro3 = 'http://bi-m.ministudy.com';
   let SERVER_HOST = {
     [dev]: dev,
-    [pro]: `${pro}/inspectorapis`,
+    [pro1]: pro,
+    [pro2]: pro,
+    [pro3]: pro
   }[window.location.origin];
 
   if (!SERVER_HOST) SERVER_HOST = dev;
