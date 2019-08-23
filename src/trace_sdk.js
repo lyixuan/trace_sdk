@@ -5,5 +5,6 @@
     document.write("<script type='text/javascript'  src="+url+"></script>");
   }
   addScript(`${SERVER_HOST}/trace/BuryPointHandler.js?v=${Math.random()}`);
+  addScript(`${SERVER_HOST}/trace/PathMap.js?v=${Math.random()}`);
 
 }());
