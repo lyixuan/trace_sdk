@@ -13,6 +13,7 @@
   let xdconfig = null;
   let onloadEvent = function () {
     // 页面统计
+    alert(1)
     const origin = window.location.origin;
     const pathname = window.location.pathname;
     if (!origin || !pathname) {
