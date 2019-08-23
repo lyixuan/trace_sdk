@@ -5,7 +5,7 @@
   const pro = 'http://bd.ministudy.com';
   let SERVER_HOST = {
     [dev]: dev,
-    [pro]: pro,
+    [pro]: `${pro}/inspectorapis`,
   }[window.location.origin];
 
   if (!SERVER_HOST) SERVER_HOST = dev;
@@ -18,6 +18,10 @@
     const pathname = window.location.pathname;
     if (!origin || !pathname) {
       return;
+    }
+    if (xdconfig && !xdconfig.userId){
+      sleep(1000);
+      window.location.reload();
     }
     postDataPage(origin, pathname);
     if (xdconfig && xdconfig.site === 2) {
@@ -89,6 +93,13 @@
     })
   };
 
+  function sleep(delay) {
+    var start = (new Date()).getTime();
+    while ((new Date()).getTime() - start < delay) {
+      continue;
+    }
+  }
+
   let getMapName = function (currentPath) {
     if (xdconfig && xdconfig.project) {
       currentPath = `/${xdconfig.project}${currentPath}`
@@ -118,19 +129,21 @@
       },
       body: JSON.stringify(sendData)
     }).then((res)=>{
-      console.log('success');
+      console.log("success",JSON.stringify(sendData));
     }).catch(function (e) {
       console.error("fetch fail", JSON.stringify(e));
     });
   };
-
   let xd = function (type, options) {
+
     if (type === 'config') {
       xdconfig = options;
     }
   };
-  window.onload = onloadEvent;
+
   window.xd = xd;
+  window.onload = onloadEvent;
   window.addEventListener('click', pathChange);
   window.addEventListener('click', clickEvent);
+
 }(window));
