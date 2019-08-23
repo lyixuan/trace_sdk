@@ -13,7 +13,6 @@
   let xdconfig = null;
   let onloadEvent = function () {
     // 页面统计
-    alert(1)
     const origin = window.location.origin;
     const pathname = window.location.pathname;
     if (!origin || !pathname) {
@@ -111,7 +110,6 @@
   let fetchSend = function (sendData) {
     delete sendData.project;
     delete sendData.pathname;
-    alert(JSON.stringify(sendData));
     // fetch(`${SERVER_HOST}/inspectorapis/trace/add`, {
     fetch(`http://172.16.58.18:8086/trace/add`, {
       method: "POST",
@@ -120,6 +118,7 @@
       },
       body: JSON.stringify(sendData)
     }).then((res)=>{
+      console.log('success');
     }).catch(function (e) {
       console.error("fetch fail", JSON.stringify(e));
     });
@@ -133,6 +132,7 @@
 
   window.onload = onloadEvent;
   window.xd = xd;
+  console.log(1,window.xd)
   window.addEventListener('click', pathChange);
   window.addEventListener('click', clickEvent);
 

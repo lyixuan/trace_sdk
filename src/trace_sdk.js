@@ -11,7 +11,7 @@
   if(!SERVER_HOST) SERVER_HOST=dev;
 
   function addScript(url){
-    document.write("<script language=javascript src="+url+"></script>");
+    document.write("<script type='text/javascript'  src="+url+"></script>");
   }
   addScript(`${SERVER_HOST}/trace/BuryPointHandler.js?v=${Math.random()}`);
 
