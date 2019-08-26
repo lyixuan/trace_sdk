@@ -12,10 +12,10 @@
     ```
     <script type="text/javascript" src="http://bd.ministudy.com/trace/trace_sdk.js"></script>
     <script>
-        xd('config',{userId:'',site:2,project:'achievement'});
+        xd('config',{getUserId:fun,site:2,project:'achievement'});
       </script>
     ```
-    + userId：用户id，从缓存获取
+    + getUserId：返回用户userId，从缓存获取
     + site：1 电脑端  2移动端
     + project：移动端path需要加项目名称，同时PathMap.js里的traceUrl也要加项目前缀。用于区分不同移动项目路由相同的情况。
 * 页面统计

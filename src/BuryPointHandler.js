@@ -7,7 +7,6 @@
   const pro2 = 'http://test-api.bd.ministudy.com';
   const pro3 = 'http://bi-m.ministudy.com';
   let SERVER_HOST = {
-    [dev]: dev,
     [pro1]: pro,
     [pro2]: pro,
     [pro3]: pro
@@ -24,10 +23,6 @@
     if (!origin || !pathname) {
       return;
     }
-    if (xdconfig && !xdconfig.userId){
-      sleep(2000);
-      window.location.reload();
-    }
     postDataPage(origin, pathname);
     if (xdconfig && xdconfig.site === 2) {
       xdconfig.pathname = window.location.pathname;
@@ -38,7 +33,7 @@
           xdconfig.pathname = window.location.pathname;
           postDataPage(origin, pathname);
         }
-      }, 150);
+      }, 250);
     }
   };
 
@@ -46,7 +41,8 @@
     // 页面统计
     const origin = event.target.origin;
     const pathname = event.target.pathname;
-    if (!origin || !pathname || !xdconfig || !xdconfig.userId || !xdconfig.site) {
+    if (!origin || !pathname || !xdconfig || !xdconfig.getUserId || !xdconfig.site) {
+      console.error('config 参数错误');
       return;
     }
     postDataPage(origin, pathname);
@@ -60,24 +56,15 @@
 
   let postDataPage = function (origin, pathname) {
     if (!isInList(pathname)) return;
-
-    if(xdconfig.project==='achievement'){
-      xdconfig.userId = achievement();
-    }
     const sendData = {
       traceType: 200,
       traceUrl: origin + pathname,
+      userId:xdconfig.getUserId(),
+      site:xdconfig.site,
       ...getMapName(pathname),
-      ...xdconfig
     };
 
     fetchSend(sendData);
-  };
-
-  let achievement = function () {
-    const userInfo = localStorage.getItem('performanceCurrentAuth');
-    const userId = JSON.parse(userInfo)?JSON.parse(userInfo).value.id:null;
-    return userId;
   };
 
   let postDataBtn = function (origin, pathname, traceName, widgetName) {
@@ -107,13 +94,6 @@
       return item.traceUrl === currentPath;
     })
   };
-
-  function sleep(delay) {
-    var start = (new Date()).getTime();
-    while ((new Date()).getTime() - start < delay) {
-      continue;
-    }
-  }
 
   let getMapName = function (currentPath) {
     if (xdconfig && xdconfig.project) {
@@ -150,7 +130,6 @@
     });
   };
   let xd = function (type, options) {
-
     if (type === 'config') {
       xdconfig = options;
     }
