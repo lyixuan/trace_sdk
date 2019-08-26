@@ -10,7 +10,7 @@
 
 * 在index.html文件引入js文件，配置：xd()参数;
     ```
-    <script type="text/javascript" src="http://bd.ministudy.com/trace/trace_sdk.js"></script>
+    <script type="text/javascript" src="http://bd.ministudy.com/trace/trace_sdk.js?v=1.0"></script>
     <script>
         xd('config',{getUserId:fun,site:2,project:'achievement'});
       </script>
