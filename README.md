@@ -14,9 +14,6 @@
     <script type="text/javascript" src="http://bd.ministudy.com/trace/trace_sdk.js?v=1.0"></script>
 
     // 测试环境
-    <script type="text/javascript" src="http://test.xd.admin.ministudy.com/trace/trace_sdk.js?v=1.0"></script>
-
-    // 测试环境，移动端配不了hosts可以用ip
     <script type="text/javascript" src="http://172.16.117.64:9999/trace/trace_sdk.js?v=1.0"></script>
     ```
 * 在 index.html 页面，配置项目参数;
