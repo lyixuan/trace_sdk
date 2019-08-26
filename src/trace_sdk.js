@@ -1,7 +1,6 @@
 ;(function(){
   'use strict';
-  // const SERVER_HOST = 'http://bd.ministudy.com';
-  const SERVER_HOST = ' http://172.16.59.247:9000';
+  const SERVER_HOST = 'http://bd.ministudy.com/trace';
   function addScript(url){
     document.write("<script type='text/javascript'  src="+url+"></script>");
   }
