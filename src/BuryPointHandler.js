@@ -1,71 +1,49 @@
 ;(function (window) {
   'use strict';
 
-  const dev = 'http://172.16.109.87:28086';
-  const pro = 'http://bd.ministudy.com/inspectorapis';
-
-  const SERVER_HOST = dev;
+  const SERVER_HOST = {
+    dev :'http://172.16.109.87:28086',
+    pro : 'http://bd.ministudy.com/inspectorapis'
+  }['dev'];
 
   let xdconfig = null;
 
   let onloadEvent = function () {
-    // 页面统计
-    const origin = window.location.origin;
-    const pathname = window.location.pathname;
+    const origin =  getOrigin();
+    const pathname = getPath();
     clearInterval(window.timer);
-    if (!origin || !pathname) {
-      return;
-    }
-    postDataPage(origin, pathname);
-    if (xdconfig && xdconfig.site === 2) {
-      intervalRecord();
-    }
+    postPageData(origin, pathname);
+    intervalRecord();
   };
 
   let intervalRecord = function () {
-    xdconfig.pathname = window.location.pathname;
+    xdconfig.pathname = getPath();
     window.timer = setInterval(function () {
       if (isPathChanged()) {
-        const origin = window.location.origin;
-        const pathname = window.location.pathname;
-        xdconfig.pathname = window.location.pathname;
-        postDataPage(origin, pathname);
+        const origin =  getOrigin();
+        const pathname = getPath();
+        xdconfig.pathname = getPath();
+        postPageData(origin, pathname);
       }
     }, 250);
   };
 
-  let pathChange = function (event) {
-    // 页面统计
-    const origin = event.target.origin;
-    const pathname = event.target.pathname;
-    const tag = event.target.tagName;
-    if(tag === 'A'){
-      if (!origin || !pathname || !xdconfig || !xdconfig.getUserId || !xdconfig.site) {
-        return;
-      }
-      postDataPage(origin, pathname);
-    } else {
-      intervalRecord();
-    }
-  };
-
   let clickEvent = function (e) {
     // 按钮点击统计
-    const {target={}} = e;
+    const {target} = e;
     const {dataset} = target||{};
     const {trace = null} = dataset||{};
     if(trace){
       const obj = JSON.parse(trace);
       const traceName = obj.traceName;
       const widgetName = obj.widgetName;
-      const origin = window.location.origin;
-      const pathname = window.location.pathname;
-      postDataBtn(origin, pathname, traceName, widgetName);
+      const origin = getOrigin();
+      const pathname = getPath();
+      postBtnData(origin, pathname,traceName, widgetName);
     }
   };
 
-
-  let postDataPage = function (origin, pathname) {
+  let postPageData = function (origin,pathname) {
     if (!isInList(pathname)) return;
     const sendData = {
       traceType: 200,
@@ -74,11 +52,10 @@
       site:xdconfig.site,
       ...getMapName(pathname),
     };
-
     fetchSend(sendData);
   };
 
-  let postDataBtn = function (origin, pathname, traceName, widgetName) {
+  let postBtnData = function (origin, pathname,traceName, widgetName) {
     const sendData = {
       traceType: 300,
       traceUrl: origin + pathname,
@@ -87,12 +64,11 @@
       userId:xdconfig.getUserId(),
       site:xdconfig.site,
     };
-
     fetchSend(sendData);
   };
 
   let isPathChanged = function () {
-    if (window.location.pathname !== xdconfig.pathname) {
+    if (getPath() !== xdconfig.pathname) {
       return true;
     }
   };
@@ -126,6 +102,18 @@
     return result;
   };
 
+  let getPath = function () {
+    const href = window.location.pathName + window.location.href;
+    const path = href.slice(0,href.indexOf('?'));
+    return path;
+  };
+
+  let getOrigin = function () {
+    const origin = window.location.origin;
+    return origin;
+  };
+
+
   let fetchSend = function (sendData) {
     fetch(`${SERVER_HOST}/trace/add`, {
       method: "POST",
@@ -139,6 +127,7 @@
       console.error("fetch fail", JSON.stringify(e));
     });
   };
+
   let xd = function (type, options) {
     if (type === 'config') {
       xdconfig = options;
@@ -147,7 +136,6 @@
 
   window.xd = xd;
   window.onload = onloadEvent;
-  window.addEventListener('click', pathChange);
   window.addEventListener('click', clickEvent);
 
 }(window));
