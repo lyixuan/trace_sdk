@@ -1,6 +1,12 @@
 ;(function(){
   'use strict';
-  const SERVER_HOST = 'http://bd.ministudy.com/trace';
+  window.env = 'pro'; // dev 走测试环境 pro 走生产环境
+
+  const SERVER_HOST = {
+    dev :'http://172.16.117.64:9999/trace',
+    pro : 'http://bd.ministudy.com/trace'
+  }[window.env];
+
   function addScript(url){
     document.write("<script type='text/javascript'  src="+url+"></script>");
   }
