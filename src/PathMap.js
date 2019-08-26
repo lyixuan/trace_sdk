@@ -136,4 +136,10 @@ const UrlWhiteList = [
     traceName:'绩效统计/每月绩效/绩效分档/绩效详情',
     traceUrl:'/achievement/details'
   },
+  //  vue pc
+  {
+    widgetName: "报考时间",
+    traceName: "报考信息系统/报考时间",
+    traceUrl: "/#/examinationTime"
+  }
 ];
