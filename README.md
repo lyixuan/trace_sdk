@@ -8,16 +8,22 @@
 
 ## 使用
 
-* 在index.html文件引入js文件，配置：xd()参数;
+* 在 index.html 页面引入js文件
     ```
-    <script type="text/javascript" src="http://bd.ministudy.com/trace/trace_sdk.js?v=1.0"></script>
+    <script type="text/javascript" src="http://bd.ministudy.com/trace/trace_sdk.js?v=1.0"></script> // 正式环境
+
+    <script type="text/javascript" src="http://test.xd.admin.ministudy.com/trace_sdk.js?v=1.0"></script> // 测试环境
+    ```
+* 在 index.html 页面，配置项目参数;
+    ```
     <script>
-        xd('config',{getUserId:fun,site:2,project:'achievement'});
-      </script>
+
+       xd('config',{ getUserId:function, site:2, project:'achievement'});
+
+       function getUserId () return userId;
+
+    </script>
     ```
-    + getUserId：返回用户userId，从缓存获取
-    + site：1 电脑端  2移动端
-    + project：移动端path需要加项目名称，同时PathMap.js里的traceUrl也要加项目前缀。用于区分不同移动项目路由相同的情况。
 * 页面统计
     ```
     将要统计的页面路由path加入PathMap.js名单，即可统计该页面；
