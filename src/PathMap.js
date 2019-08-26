@@ -1,4 +1,5 @@
 const UrlWhiteList = [
+  // 小德
   {
     widgetName:'新质检单管理',
     traceName:'质检管理/新质检单管理',
@@ -94,7 +95,7 @@ const UrlWhiteList = [
     traceName:'低人效运营/退费-狐逻泰罗',
     traceUrl:'/inspector/allReport/refundDetailHuluo'
   },
-  //  移动端
+  //  小德移动端
   {
     widgetName:'学分统计',
     traceName:'学分统计',
@@ -135,4 +136,10 @@ const UrlWhiteList = [
     traceName:'绩效统计/每月绩效/绩效分档/绩效详情',
     traceUrl:'/achievement/details'
   },
+  //  vue pc
+  {
+    widgetName: "报考时间",
+    traceName: "报考信息系统/报考时间",
+    traceUrl: "/#/examinationTime"
+  }
 ];

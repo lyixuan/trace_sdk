@@ -103,8 +103,13 @@
   };
 
   let getPath = function () {
-    const href = window.location.pathName + window.location.href;
-    const path = href.slice(0,href.indexOf('?'));
+    let hash = window.location.hash;
+    const pathname = window.location.pathname;
+    const hasSearch = window.location.hash.indexOf('?') > -1;
+    if(hasSearch) {
+      hash = hash.slice(0,hash.indexOf('?'));
+    }
+    const path = hash ? pathname+hash : pathname;
     return path;
   };
 
