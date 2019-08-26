@@ -26,5 +26,5 @@
  * 按钮点击事件统计
      ```
      在点击元素上，增加data-traceData属性，并绑定对应的值
-     eg：<div data-traceData={widgetName:'待申诉-查询',traceName:'学分申诉/待申诉/查询'}>
+     eg：<div data-trace='{"widgetName":"待申诉-查询","traceName":"学分申诉/待申诉/查询"}'>
      ```

@@ -3,16 +3,8 @@
 
   const dev = 'http://172.16.109.87:28086';
   const pro = 'http://bd.ministudy.com/inspectorapis';
-  const pro1 = 'http://bd.ministudy.com';
-  const pro2 = 'http://test-api.bd.ministudy.com';
-  const pro3 = 'http://bi-m.ministudy.com';
-  let SERVER_HOST = {
-    [pro1]: pro,
-    [pro2]: pro,
-    [pro3]: pro
-  }[window.location.origin];
 
-  if (!SERVER_HOST) SERVER_HOST = dev;
+  const SERVER_HOST = dev;
 
   let xdconfig = null;
 
@@ -20,37 +12,56 @@
     // 页面统计
     const origin = window.location.origin;
     const pathname = window.location.pathname;
+    clearInterval(window.timer);
     if (!origin || !pathname) {
       return;
     }
     postDataPage(origin, pathname);
     if (xdconfig && xdconfig.site === 2) {
-      xdconfig.pathname = window.location.pathname;
-      setInterval(function () {
-        if (isPathChanged()) {
-          const origin = window.location.origin;
-          const pathname = window.location.pathname;
-          xdconfig.pathname = window.location.pathname;
-          postDataPage(origin, pathname);
-        }
-      }, 250);
+      intervalRecord();
     }
+  };
+
+  let intervalRecord = function () {
+    xdconfig.pathname = window.location.pathname;
+    window.timer = setInterval(function () {
+      if (isPathChanged()) {
+        const origin = window.location.origin;
+        const pathname = window.location.pathname;
+        xdconfig.pathname = window.location.pathname;
+        postDataPage(origin, pathname);
+      }
+    }, 250);
   };
 
   let pathChange = function (event) {
     // 页面统计
     const origin = event.target.origin;
     const pathname = event.target.pathname;
-    if (!origin || !pathname || !xdconfig || !xdconfig.getUserId || !xdconfig.site) {
-      console.error('config 参数错误');
-      return;
+    const tag = event.target.tagName;
+    if(tag === 'A'){
+      if (!origin || !pathname || !xdconfig || !xdconfig.getUserId || !xdconfig.site) {
+        return;
+      }
+      postDataPage(origin, pathname);
+    } else {
+      intervalRecord();
     }
-    postDataPage(origin, pathname);
   };
 
   let clickEvent = function (e) {
     // 按钮点击统计
-    console.log('click')
+    const {target={}} = e;
+    const {dataset} = target||{};
+    const {trace = null} = dataset||{};
+    if(trace){
+      const obj = JSON.parse(trace);
+      const traceName = obj.traceName;
+      const widgetName = obj.widgetName;
+      const origin = window.location.origin;
+      const pathname = window.location.pathname;
+      postDataBtn(origin, pathname, traceName, widgetName);
+    }
   };
 
 
@@ -73,7 +84,8 @@
       traceUrl: origin + pathname,
       traceName,
       widgetName,
-      ...xdconfig
+      userId:xdconfig.getUserId(),
+      site:xdconfig.site,
     };
 
     fetchSend(sendData);
@@ -115,8 +127,6 @@
   };
 
   let fetchSend = function (sendData) {
-    delete sendData.project;
-    delete sendData.pathname;
     fetch(`${SERVER_HOST}/trace/add`, {
       method: "POST",
       headers: {
