@@ -145,16 +145,16 @@ const UrlWhiteList = [
     {
     widgetName: "报考流程",
     traceName: "报考信息系统/报考流程",
-    traceUrl: "/examinationProcess"
+    traceUrl: "/#/examinationProcess"
   },
   {
     widgetName: "报考网址",
     traceName: "报考信息系统/报考网址",
-    traceUrl: "/examinationAddress"
+    traceUrl: "/#/examinationAddress"
   },
   {
     widgetName: "联系自考办",
     traceName: "报考信息系统/联系自考办",
-    traceUrl: "/lianxi"
+    traceUrl: "/#/lianxi"
   }
 ];
