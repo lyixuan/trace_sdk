@@ -140,21 +140,21 @@ const UrlWhiteList = [
   {
     widgetName: "报考时间",
     traceName: "报考信息系统/报考时间",
-    traceUrl: "/#/examinationTime"
+    traceUrl: window.env === "dev" ? "/#/examinationTime" : "/examweb/#/examinationTime"
   },
     {
     widgetName: "报考流程",
     traceName: "报考信息系统/报考流程",
-    traceUrl: "/#/examinationProcess"
+    traceUrl: window.env === "dev" ? "/#/examinationProcess" : "/examweb/#/examinationProcess"
   },
   {
     widgetName: "报考网址",
     traceName: "报考信息系统/报考网址",
-    traceUrl: "/#/examinationAddress"
+    traceUrl: window.env === "dev" ? "/#/examinationAddress" : "/examweb/#/examinationAddress"
   },
   {
     widgetName: "联系自考办",
     traceName: "报考信息系统/联系自考办",
-    traceUrl: "/#/lianxi"
+    traceUrl: window.env === "dev" ? "/#/lianxi" : "/examweb/#/lianxi"
   }
 ];
