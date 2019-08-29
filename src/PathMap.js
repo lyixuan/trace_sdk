@@ -81,17 +81,17 @@ const UrlWhiteList = [
     traceUrl:'/inspector/allReport/refundPhase'
   },
   {
-    widgetName:'退费-自变量',
+    widgetName:'底表数据-自变量',
     traceName:'低人效运营/退费-自变量',
     traceUrl:'/inspector/allReport/refundDetailZibianliang'
   },
   {
-    widgetName:'退费-芒格',
+    widgetName:'底表数据-芒格',
     traceName:'低人效运营/退费-芒格',
     traceUrl:'/inspector/allReport/refundDetailMangge'
   },
   {
-    widgetName:'退费-狐逻泰罗',
+    widgetName:'底表数据-狐逻泰罗',
     traceName:'低人效运营/退费-狐逻泰罗',
     traceUrl:'/inspector/allReport/refundDetailHuluo'
   },
@@ -140,21 +140,21 @@ const UrlWhiteList = [
   {
     widgetName: "报考时间",
     traceName: "报考信息系统/报考时间",
-    traceUrl: "/#/examinationTime"
+    traceUrl: `${window.examweb}/#/examinationTime`
   },
     {
     widgetName: "报考流程",
     traceName: "报考信息系统/报考流程",
-    traceUrl: "/#/examinationProcess"
+    traceUrl: `${window.examweb}/#/examinationProcess`
   },
   {
     widgetName: "报考网址",
     traceName: "报考信息系统/报考网址",
-    traceUrl: "/#/examinationAddress"
+    traceUrl: `${window.examweb}/examweb/#/examinationAddress`
   },
   {
     widgetName: "联系自考办",
     traceName: "报考信息系统/联系自考办",
-    traceUrl: "/#/lianxi"
+    traceUrl: `${window.examweb}/#/lianxi`
   }
 ];

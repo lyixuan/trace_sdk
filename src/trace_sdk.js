@@ -8,6 +8,8 @@
     pro : 'http://bd.ministudy.com/trace'
   }[window.env];
 
+  window.examweb = window.env==='dev'?'':'/examweb';
+
   function addScript(url){
     document.write("<script type='text/javascript'  src="+url+"></script>");
   }
