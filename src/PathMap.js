@@ -95,6 +95,11 @@ const UrlWhiteList = [
     traceName:'低人效运营/退费-狐逻泰罗',
     traceUrl:'/inspector/allReport/refundDetailHuluo'
   },
+  {
+    widgetName:'报考信息',
+    traceName:'报考信息系统/只读查询',
+    traceUrl:'/inspector/allReport/examReadOnly'
+  },
   //  小德移动端
   {
     widgetName:'学分统计',
