@@ -145,47 +145,47 @@ const UrlWhiteList = [
   {
     widgetName:'创收列表-学院',
     traceName:'',
-    traceUrl:'/performance/admin'
+    traceUrl:'/achievement/performance/admin'
   },
   {
     widgetName:'创收列表-家族',
     traceName:'',
-    traceUrl:'/performance/president'
+    traceUrl:'/achievement/performance/president'
   },
   {
     widgetName:'创收列表-小组',
     traceName:'',
-    traceUrl:'/performance/group'
+    traceUrl:'/achievement/performance/group'
   },
   {
     widgetName:'创收详情-家族长',
     traceName:'',
-    traceUrl:'/performance/family'
+    traceUrl:'/achievement/performance/family'
   },
   {
     widgetName:'创收详情-运营长',
     traceName:'',
-    traceUrl:'/performance/operation'
+    traceUrl:'/achievement/performance/operation'
   },
   {
     widgetName:'创收详情-班主任',
     traceName:'',
-    traceUrl:'/performance/teacher'
+    traceUrl:'/achievement/performance/teacher'
   },
   {
     widgetName:'好推绩效',
     traceName:'',
-    traceUrl:'/performance/renewal'
+    traceUrl:'/achievement/performance/renewal'
   },
   {
     widgetName:'续报绩效',
     traceName:'',
-    traceUrl:'/performance/goodpush'
+    traceUrl:'/achievement/performance/goodpush'
   },
   {
     widgetName:'成考专本套绩效',
     traceName:'',
-    traceUrl:'/performance/adulttest'
+    traceUrl:'/achievement/performance/adulttest'
   },
   //  vue pc
   {
