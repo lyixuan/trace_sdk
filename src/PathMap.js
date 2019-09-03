@@ -201,7 +201,7 @@ const UrlWhiteList = [
   {
     widgetName: "报考网址",
     traceName: "报考信息系统/报考网址",
-    traceUrl: `${window.examweb}/examweb/#/examinationAddress`
+    traceUrl: `${window.examweb}/#/examinationAddress`
   },
   {
     widgetName: "联系自考办",
