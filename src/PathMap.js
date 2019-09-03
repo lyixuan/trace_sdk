@@ -81,17 +81,17 @@ const UrlWhiteList = [
     traceUrl:'/inspector/allReport/refundPhase'
   },
   {
-    widgetName:'底表数据-自变量',
+    widgetName:'底表-自变量',
     traceName:'低人效运营/退费-自变量',
     traceUrl:'/inspector/allReport/refundDetailZibianliang'
   },
   {
-    widgetName:'底表数据-芒格',
+    widgetName:'底表-芒格',
     traceName:'低人效运营/退费-芒格',
     traceUrl:'/inspector/allReport/refundDetailMangge'
   },
   {
-    widgetName:'底表数据-狐逻泰罗',
+    widgetName:'底表-狐逻泰罗',
     traceName:'低人效运营/退费-狐逻泰罗',
     traceUrl:'/inspector/allReport/refundDetailHuluo'
   },
@@ -116,6 +116,7 @@ const UrlWhiteList = [
     traceName:'学分统计/学分列表/学分详情',
     traceUrl:'/score/demention'
   },
+  //  绩效移动端
   {
     widgetName:'绩效统计',
     traceName:'绩效统计',
@@ -140,6 +141,51 @@ const UrlWhiteList = [
     widgetName:'绩效详情',
     traceName:'绩效统计/每月绩效/绩效分档/绩效详情',
     traceUrl:'/achievement/details'
+  },
+  {
+    widgetName:'创收列表-学院',
+    traceName:'',
+    traceUrl:'/performance/admin'
+  },
+  {
+    widgetName:'创收列表-家族',
+    traceName:'',
+    traceUrl:'/performance/president'
+  },
+  {
+    widgetName:'创收列表-小组',
+    traceName:'',
+    traceUrl:'/performance/group'
+  },
+  {
+    widgetName:'创收详情-家族长',
+    traceName:'',
+    traceUrl:'/performance/family'
+  },
+  {
+    widgetName:'创收详情-运营长',
+    traceName:'',
+    traceUrl:'/performance/operation'
+  },
+  {
+    widgetName:'创收详情-班主任',
+    traceName:'',
+    traceUrl:'/performance/teacher'
+  },
+  {
+    widgetName:'好推绩效',
+    traceName:'',
+    traceUrl:'/performance/renewal'
+  },
+  {
+    widgetName:'续报绩效',
+    traceName:'',
+    traceUrl:'/performance/goodpush'
+  },
+  {
+    widgetName:'成考专本套绩效',
+    traceName:'',
+    traceUrl:'/performance/adulttest'
   },
   //  vue pc
   {
