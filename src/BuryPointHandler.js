@@ -120,6 +120,9 @@
 
 
   let fetchSend = function (sendData) {
+    if(!originCheck()){
+      return
+    }
     fetch(`${SERVER_HOST}/trace/add`, {
       method: "POST",
       headers: {
@@ -133,6 +136,15 @@
     });
   };
 
+  let originCheck = function () {
+    if(window.env==='pro'){
+      const origin = getPath();
+      if(origin.indexOf('localhost')>-1||origin.indexOf('test')>-1||origin.indexOf('dev')>-1||origin.indexOf('172')>-1){
+        return false
+      }
+    }
+    return true
+  };
   let xd = function (type, options) {
     if (type === 'config') {
       xdconfig = options;
