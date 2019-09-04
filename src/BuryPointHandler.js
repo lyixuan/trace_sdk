@@ -139,7 +139,7 @@
   let originCheck = function () {
     if(window.env==='pro'){
       const origin = getPath();
-      if(origin.indexOf('localhost')>-1||origin.indexOf('test')>-1||origin.indexOf('dev')>-1||origin.indexOf('172')>-1){
+      if(origin.indexOf('localhost')>-1||origin.indexOf('test.')>-1||origin.indexOf('dev')>-1||origin.indexOf('172')>-1){
         return false
       }
     }
