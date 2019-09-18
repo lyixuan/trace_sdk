@@ -187,6 +187,11 @@ const UrlWhiteList = [
     traceName:'',
     traceUrl:'/achievement/performance/adulttest'
   },
+    {
+        widgetName:'小德工作台',
+        traceName:'',
+        traceUrl:'/inspector/xdWorkbench/index'
+    },
   //  vue pc
   {
     widgetName: "报考时间",
