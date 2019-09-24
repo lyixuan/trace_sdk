@@ -193,7 +193,7 @@ const UrlWhiteList = [
     traceUrl: '/inspector/indexPage'
   },
   {
-    widgetName: '小德学分',
+    widgetName: '学分明细',
     traceName: '',
     traceUrl: '/inspector/xdCredit/index'
   },
