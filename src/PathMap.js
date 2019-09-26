@@ -194,7 +194,7 @@ const UrlWhiteList = [
   },
   {
     widgetName: '学分明细',
-    traceName: '',
+    traceName: '数据服务/学分明细',
     traceUrl: '/inspector/xdCredit/index'
   },
   //  vue pc
