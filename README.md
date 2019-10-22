@@ -58,7 +58,7 @@
 
       ```
       const obj = {widgetName:"待申诉-查询",traceName:"学分申诉/待申诉/查询"}
-      const {BI} = window;
-       BI.traceV(obj)
+      const {BI = {}} = window;
+      BI.traceV && BI.traceV(obj)
            ```
 
