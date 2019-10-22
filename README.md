@@ -45,7 +45,8 @@
             traceUrl:'/inspector/allReport/koDaily'
         }
         ```
- * 3.2、元素点击事件cv统计
+        
+* 3.2、元素点击事件cv统计
 
       点击绑定 trace 属性的元素可统计
 
