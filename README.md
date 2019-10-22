@@ -35,17 +35,18 @@
     ```
 * 3.1、页面pv统计
 
-  页面刷面或切换统计
+      页面刷面或切换统计
 
-  将要统计的页面路径加入 PathMap.js 名单，即可自动统计该页面；
-    ```
-      {
-        widgetName:'KO日报',
-        traceName:'运营分析/KO日报',
-        traceUrl:'/inspector/allReport/koDaily'
-      }
-    ```
- * 3.2、元素点击事件cv统计
+      将要统计的页面路径加入 PathMap.js 名单，即可自动统计该页面；
+      ```
+        {
+          widgetName:'KO日报',
+          traceName:'运营分析/KO日报',
+          traceUrl:'/inspector/allReport/koDaily'
+        }
+      ```
+
+* 3.2、元素点击事件cv统计
 
       点击绑定 trace 属性的元素可统计
 
@@ -60,5 +61,5 @@
       const obj = {widgetName:"待申诉-查询",traceName:"学分申诉/待申诉/查询"}
       const {BI = {}} = window;
       BI.traceV && BI.traceV(obj)
-           ```
+      ```
 
