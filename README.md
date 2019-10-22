@@ -38,13 +38,13 @@
       页面刷面或切换统计
 
       将要统计的页面路径加入 PathMap.js 名单，即可自动统计该页面；
-        ```
+      ```
         {
-            widgetName:'KO日报',
-            traceName:'运营分析/KO日报',
-            traceUrl:'/inspector/allReport/koDaily'
+          widgetName:'KO日报',
+          traceName:'运营分析/KO日报',
+          traceUrl:'/inspector/allReport/koDaily'
         }
-        ```
+      ```
         
 * 3.2、元素点击事件cv统计
 
