@@ -43,6 +43,17 @@
     }
   };
 
+  let funEvent = function (o) {
+    // 调用方法统计
+    if(o){
+      const {traceName,widgetName} = o || {};
+      const origin = getOrigin();
+      const pathname = getPath();
+      postBtnData(origin, pathname,traceName, widgetName);
+    }
+  };
+
+
   let postPageData = function (origin,pathname) {
     if (!isInList(pathname)) return;
     const sendData = {
@@ -154,5 +165,7 @@
   window.xd = xd;
   window.onload = onloadEvent;
   window.addEventListener('click', clickEvent);
-
+  window['BI'] = {
+    traceV: funEvent,
+  };
 }(window));
