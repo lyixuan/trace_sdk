@@ -197,6 +197,11 @@ const UrlWhiteList = [
     traceName: '数据服务/学分明细',
     traceUrl: '/inspector/xdCredit/index'
   },
+  {
+      widgetName: '管理层工作台',
+      traceName: '管理层工作台',
+      traceUrl: '/inspector/indexPage/ManagementBench'
+  },
   //  vue pc
   {
     widgetName: "报考时间",
