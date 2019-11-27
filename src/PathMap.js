@@ -208,13 +208,13 @@ const UrlWhiteList = [
     traceUrl: '/inspector/examPlant/index'
   },
   {
-    widgetName: '客诉质检报告',
-    traceName: '质检管理/客诉质检报告',
+    widgetName: '客诉质检手册',
+    traceName: '质检管理/客诉质检手册',
     traceUrl: '/inspector/classQuality/qualityType/1'
   },
   {
-    widgetName: '班主任质检报告',
-    traceName: '质检管理/班主任质检报告',
+    widgetName: '班主任质检手册',
+    traceName: '质检管理/班主任质检手册',
     traceUrl: '/inspector/classQuality/qualityType/2'
   },
   //  vue pc
