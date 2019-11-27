@@ -207,6 +207,16 @@ const UrlWhiteList = [
     traceName: '报考大盘',
     traceUrl: '/inspector/examPlant/index'
   },
+  {
+    widgetName: '客诉质检报告',
+    traceName: '质检管理/客诉质检报告',
+    traceUrl: '/inspector/classQuality/qualityType/1'
+  },
+  {
+    widgetName: '班主任质检报告',
+    traceName: '质检管理/班主任质检报告',
+    traceUrl: '/inspector/classQuality/qualityType/2'
+  },
   //  vue pc
   {
     widgetName: "报考时间",
