@@ -222,11 +222,6 @@ const UrlWhiteList = [
     traceName: '魔方计划/魔方计划列表',
     traceUrl: '/inspector/cubePlan/list'
   },
-  {
-    widgetName: '魔方计划列表',
-    traceName: '魔方计划/魔方计划列表',
-    traceUrl: '/inspector/cubePlan/list1'
-  },
   //  vue pc
   {
     widgetName: "报考时间",
