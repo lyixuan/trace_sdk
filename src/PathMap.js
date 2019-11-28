@@ -242,5 +242,14 @@ const UrlWhiteList = [
     widgetName: "联系自考办",
     traceName: "报考信息系统/联系自考办",
     traceUrl: `${window.examweb}/#/lianxi`
-  }
+  },
+    {
+        widgetName: '积分首页',
+        traceName: '积分首页',
+        traceUrl: '/myPoints'
+    },{
+        widgetName: '积分明细',
+        traceName: '积分首页/积分明细',
+        traceUrl: '/pointsDetail'
+    }
 ];
