@@ -218,8 +218,8 @@ const UrlWhiteList = [
     traceUrl: '/inspector/classQuality/qualityType/2'
   },
   {
-    widgetName: '魔方计划介绍',
-    traceName: '魔方计划/魔方计划介绍',
+    widgetName: '魔方计划列表',
+    traceName: '魔方计划/魔方计划列表',
     traceUrl: '/inspector/cubePlan/list'
   },
   //  vue pc
