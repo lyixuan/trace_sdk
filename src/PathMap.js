@@ -217,6 +217,11 @@ const UrlWhiteList = [
     traceName: '质检管理/班主任质检手册',
     traceUrl: '/inspector/classQuality/qualityType/2'
   },
+  {
+    widgetName: '魔方计划列表',
+    traceName: '魔方计划/魔方计划列表',
+    traceUrl: '/inspector/cubePlan/list'
+  },
   //  vue pc
   {
     widgetName: "报考时间",
