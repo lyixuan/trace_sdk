@@ -68,7 +68,7 @@
 
   let postBtnData = function (origin, pathname,traceName, widgetName,traceType) {
     const sendData = {
-      traceType: traceType ,
+      traceType: traceType?traceType:300 ,
       traceUrl: origin + pathname,
       traceName,
       widgetName,
