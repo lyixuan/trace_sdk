@@ -46,7 +46,7 @@
   let funEvent = function (o) {
     // 调用方法统计
     if(o){
-      const {traceName,widgetName} = o || {};
+      const {traceName,widgetName,traceType} = o || {};
       const origin = getOrigin();
       const pathname = getPath();
       postBtnData(origin, pathname,traceName, widgetName,traceType);
