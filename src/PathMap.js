@@ -267,7 +267,7 @@ const UrlWhiteList = [
     {
         widgetName: '产品包不符合条件页',
         traceName: '产品包不符合条件页',
-        traceUrl: '/emptyPage/missMatchPackage'
+        traceUrl: '/emptyPage/missMatchOrder'
     },
     {
         widgetName: '暂无学习数据页',
