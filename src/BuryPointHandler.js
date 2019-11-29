@@ -66,9 +66,9 @@
     fetchSend(sendData);
   };
 
-  let postBtnData = function (origin, pathname,traceName, widgetName) {
+  let postBtnData = function (origin, pathname,traceName, widgetName,traceType) {
     const sendData = {
-      traceType: 300,
+      traceType: traceType ? traceType : 300,
       traceUrl: origin + pathname,
       traceName,
       widgetName,
