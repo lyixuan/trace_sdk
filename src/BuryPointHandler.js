@@ -49,7 +49,7 @@
       const {traceName,widgetName} = o || {};
       const origin = getOrigin();
       const pathname = getPath();
-      postBtnData(origin, pathname,traceName, widgetName);
+      postBtnData(origin, pathname,traceName, widgetName,traceType);
     }
   };
 
