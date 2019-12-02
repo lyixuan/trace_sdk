@@ -1,11 +1,13 @@
 ; (function () {
   'use strict';
 
-  window.env = 'dev'; // dev 走测试环境 pro 走生产环境
-
+  if(!window.env){
+      window.env = 'dev'; // dev 走测试环境 pro 走生产环境
+  }
   const SERVER_HOST = {
     dev: 'http://172.16.117.64:9999/trace',
-    pro: 'http://bd.ministudy.com/trace'
+    pro: 'http://bd.ministudy.com/trace',
+    pro2:'https://h-bd.ministudy.com/trace'
   }[window.env];
 
   window.examweb = window.env === 'dev' ? '' : '/examweb';

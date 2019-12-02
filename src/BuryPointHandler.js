@@ -3,7 +3,8 @@
 
   const SERVER_HOST = {
     dev :'http://172.16.109.87:28086',
-    pro : 'http://bd.ministudy.com/inspectorapis'
+    pro : 'http://bd.ministudy.com/inspectorapis',
+    pro2:'https://h-bd.ministudy.com/inspectorapis'
   }[window.env];
 
   let xdconfig = null;
