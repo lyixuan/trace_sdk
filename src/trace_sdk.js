@@ -4,6 +4,7 @@
   if(!window.env){
       window.env = 'dev'; // dev 走测试环境 pro 走生产环境
   }
+  console.log(7,window.env)
   const SERVER_HOST = {
     dev: 'http://172.16.117.64:9999/trace',
     pro: 'http://bd.ministudy.com/trace',
