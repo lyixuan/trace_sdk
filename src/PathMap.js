@@ -100,6 +100,11 @@ const UrlWhiteList = [
     traceName: '报考信息系统/只读查询',
     traceUrl: '/inspector/allReport/examReadOnly'
   },
+  {
+    widgetName: '热门问题',
+    traceName: '热门问题',
+    traceUrl: '/inspector/hotQuestion/index'
+  },
   //  小德移动端
   {
     widgetName: '学分统计',
@@ -252,32 +257,5 @@ const UrlWhiteList = [
         widgetName: '积分明细',
         traceName: '积分首页/积分明细',
         traceUrl: '/pointsDetail'
-    },
-//    我的学习报告
-    {
-        widgetName: '分享成功页',
-        traceName: '分享成功页',
-        traceUrl: '/sharePage'
-    },
-    {
-        widgetName: '身份不符合条件页',
-        traceName: '身份不符合条件页',
-        traceUrl: '/emptyPage/missMatch'
-    },
-    {
-        widgetName: '产品包不符合条件页',
-        traceName: '产品包不符合条件页',
-        traceUrl: '/emptyPage/missMatchOrder'
-    },
-    {
-        widgetName: '暂无学习数据页',
-        traceName: '暂无学习数据页',
-        traceUrl: '/emptyPage/noStudyData'
-    },{
-        widgetName: '暂无学习数据页',
-        traceName: '暂无学习数据页',
-        traceUrl: '/emptyPage/noLearnData'
     }
-
-
 ];
