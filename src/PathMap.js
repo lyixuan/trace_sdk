@@ -100,6 +100,11 @@ const UrlWhiteList = [
     traceName: '报考信息系统/只读查询',
     traceUrl: '/inspector/allReport/examReadOnly'
   },
+  {
+    widgetName: '热门问题',
+    traceName: '热门问题',
+    traceUrl: '/inspector/hotQuestion/index'
+  },
   //  小德移动端
   {
     widgetName: '学分统计',
