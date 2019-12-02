@@ -257,32 +257,5 @@ const UrlWhiteList = [
         widgetName: '积分明细',
         traceName: '积分首页/积分明细',
         traceUrl: '/pointsDetail'
-    },
-//    我的学习报告
-    {
-        widgetName: '分享成功页',
-        traceName: '分享成功页',
-        traceUrl: '/sharePage'
-    },
-    {
-        widgetName: '身份不符合条件页',
-        traceName: '身份不符合条件页',
-        traceUrl: '/emptyPage/missMatch'
-    },
-    {
-        widgetName: '产品包不符合条件页',
-        traceName: '产品包不符合条件页',
-        traceUrl: '/emptyPage/missMatchOrder'
-    },
-    {
-        widgetName: '暂无学习数据页',
-        traceName: '暂无学习数据页',
-        traceUrl: '/emptyPage/noStudyData'
-    },{
-        widgetName: '暂无学习数据页',
-        traceName: '暂无学习数据页',
-        traceUrl: '/emptyPage/noLearnData'
     }
-
-
 ];
