@@ -1,6 +1,7 @@
 ; (function () {
   'use strict';
 
+  console.log(4,window)
   if(!window.env){
       window.env = 'dev'; // dev 走测试环境 pro 走生产环境
   }
