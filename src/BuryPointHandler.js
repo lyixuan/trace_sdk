@@ -4,7 +4,6 @@
   const SERVER_HOST = {
     dev :'http://172.16.109.87:28086',
     pro : 'http://bd.ministudy.com/inspectorapis',
-    pro2:'https://h5-test.commeal.cn/inspectorapis'
   }[window.env];
 
   let xdconfig = null;

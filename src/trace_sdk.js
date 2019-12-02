@@ -1,16 +1,11 @@
 ; (function () {
   'use strict';
 
-  console.log(4,window,window.env)
-  if(!window.env){
-    console.log(6,window.env)
-      window.env = 'dev'; // dev 走测试环境 pro 走生产环境
-  }
-  console.log(7,window.env)
+ window.env = 'dev'; // dev 走测试环境 pro 走生产环境
+
   const SERVER_HOST = {
     dev: 'http://172.16.117.64:9999/trace',
     pro: 'http://bd.ministudy.com/trace',
-    pro2:'https://h5-test.commeal.cn/trace'
   }[window.env];
 
   window.examweb = window.env === 'dev' ? '' : '/examweb';
