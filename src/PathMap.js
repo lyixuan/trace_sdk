@@ -121,11 +121,6 @@ const UrlWhiteList = [
     traceName: '学分统计/学分列表/学分详情',
     traceUrl: '/score/demention'
   },
-  {
-    widgetName: '学分pk页打开',
-    traceName: '首页/学分pk页',
-    traceUrl: '/xdCreditPk/list'
-  },
   //  绩效移动端
   {
     widgetName: '绩效统计',
@@ -231,6 +226,11 @@ const UrlWhiteList = [
     widgetName: '魔方计划列表',
     traceName: '魔方计划/魔方计划列表',
     traceUrl: '/inspector/cubePlan/list'
+  },
+  {
+    widgetName: '学分pk页打开',
+    traceName: '首页/学分pk页',
+    traceUrl: '/xdCreditPk/list'
   },
   //  vue pc
   {
