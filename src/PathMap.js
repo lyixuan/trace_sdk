@@ -232,11 +232,6 @@ const UrlWhiteList = [
     traceName: '首页/学分pk页',
     traceUrl: '/inspector/xdCreditPk/list'
   },
-  {
-    widgetName: '学分pk页打开',
-    traceName: '首页/学分pk页',
-    traceUrl: '/inspector/xdCreditPk/list/1'
-  },
   //  vue pc
   {
     widgetName: "报考时间",
