@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: sdk-static-pro-master-service
+  name: sdk-static-pro-master-service
+spec:
+  ports:
+  - port: 20084
+    protocol: TCP
+    targetPort: 80
+    nodePort: 20084
+  selector:
+    app: sdk-static-pro-master-service
+  type: NodePort
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: sdk-static-pro-master-service-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sdk-static-pro-master-service
+    spec:
+      nodeName: 172.16.109.119
+      containers:
+      - name: sdk-static-pro-master-service
+        image: hub.sunland2.com:8234/sscp-service/sdk-js-pro:<BUILD_TAG>
+        ports:
+        - containerPort: 80
