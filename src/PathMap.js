@@ -213,6 +213,16 @@ const UrlWhiteList = [
     traceUrl: '/inspector/examPlant/index'
   },
   {
+    widgetName: '准考证填写排行',
+    traceName: '准考证填写排行',
+    traceUrl: '/inspector/examPlant/admissionTicket'
+  },
+  {
+    widgetName: '报考触达',
+    traceName: '报考触达',
+    traceUrl: '/inspector/examPlant/registTouch'
+  },
+  {
     widgetName: '客诉质检手册',
     traceName: '质检管理/客诉质检手册',
     traceUrl: '/inspector/classQuality/qualityType/1'
