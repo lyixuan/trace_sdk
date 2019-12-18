@@ -257,6 +257,11 @@ const UrlWhiteList = [
     traceName: '2.0/创收_创收对比',
     traceUrl: '/inspector/newdetail/incomeRank'
   },
+  {
+    widgetName: '创收_创收分析',
+    traceName: '2.0/创收_创收分析',
+    traceUrl: '/inspector/newdetail/analyze'
+  },
   //  vue pc
   {
     widgetName: "报考时间",
