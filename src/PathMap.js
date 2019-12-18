@@ -242,6 +242,21 @@ const UrlWhiteList = [
     traceName: '首页/学分pk页',
     traceUrl: '/inspector/xdCreditPk/list'
   },
+  {
+    widgetName: 'im差评页',
+    traceName: '学分/im差评页',
+    traceUrl: '/inspector/xdCredit/im'
+  },
+  {
+    widgetName: '学分排名页',
+    traceName: '学分/学分排名页',
+    traceUrl: '/inspector/newdetail/histogram'
+  },
+  {
+    widgetName: '创收_创收对比',
+    traceName: '2.0/创收_创收对比',
+    traceUrl: '/inspector/newdetail/incomeRank'
+  },
   //  vue pc
   {
     widgetName: "报考时间",
