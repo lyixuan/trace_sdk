@@ -250,17 +250,17 @@ const UrlWhiteList = [
   {
     widgetName: '学分排名页',
     traceName: '学分/学分排名页',
-    traceUrl: '/inspector/newdetail/histogram'
+    traceUrl: '/inspector/newDetail/histogram'
   },
   {
     widgetName: '创收_创收对比',
     traceName: '2.0/创收_创收对比',
-    traceUrl: '/inspector/newdetail/incomeRank'
+    traceUrl: '/inspector/newDetail/incomeRank'
   },
   {
     widgetName: '创收_创收分析',
     traceName: '2.0/创收_创收分析',
-    traceUrl: '/inspector/newdetail/analyze'
+    traceUrl: '/inspector/newDetail/analyze'
   },
   //  vue pc
   {
