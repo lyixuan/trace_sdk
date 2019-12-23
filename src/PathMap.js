@@ -223,6 +223,16 @@ const UrlWhiteList = [
     traceUrl: '/inspector/examPlant/registTouch'
   },
   {
+    widgetName: 'IM机器人会话数据',
+    traceName: 'IM机器人会话数据',
+    traceUrl: '/inspector/robotPage/data'
+  },
+  {
+    widgetName: 'IM机器人会话趋势',
+    traceName: 'IM机器人会话趋势',
+    traceUrl: '/inspector/robotPage/trend'
+  },
+  {
     widgetName: '客诉质检手册',
     traceName: '质检管理/客诉质检手册',
     traceUrl: '/inspector/classQuality/qualityType/1'
