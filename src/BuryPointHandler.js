@@ -59,7 +59,7 @@
     const sendData = {
       traceType: 200,
       traceUrl: origin + pathname,
-      userId:xdconfig.getUserId(),
+      userId:xdconfig.getUserId?xdconfig.getUserId():0,
       userName:xdconfig.getUserName?xdconfig.getUserName():'',
       site:xdconfig.site,
       ...getMapName(pathname),
