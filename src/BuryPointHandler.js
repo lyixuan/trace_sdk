@@ -3,7 +3,7 @@
 
   const SERVER_HOST = {
     dev :'http://172.16.109.87:28086',
-    pro : 'http://bd.ministudy.com/inspectorapis',
+    pro : 'https://h-bd.ministudy.com/inspectorapis',
   }[window.env];
 
   let xdconfig = null;
@@ -60,6 +60,7 @@
       traceType: 200,
       traceUrl: origin + pathname,
       userId:xdconfig.getUserId(),
+      userName:xdconfig.getUserName?xdconfig.getUserName():'',
       site:xdconfig.site,
       ...getMapName(pathname),
     };
@@ -73,6 +74,7 @@
       traceName,
       widgetName,
       userId:xdconfig.getUserId(),
+      userName:xdconfig.getUserName?xdconfig.getUserName():'',
       site:xdconfig.site,
     };
     fetchSend(sendData);

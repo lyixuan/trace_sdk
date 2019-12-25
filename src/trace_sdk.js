@@ -5,7 +5,7 @@
 
   const SERVER_HOST = {
     dev: 'http://172.16.117.64:9999/trace',
-    pro: 'http://bd.ministudy.com/trace',
+    pro: 'https://h-bd.ministudy.com/trace',
   }[window.env];
 
   window.examweb = window.env === 'dev' ? '' : '/examweb';
