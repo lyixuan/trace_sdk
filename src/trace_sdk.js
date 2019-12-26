@@ -4,7 +4,7 @@
  window.env = 'pro'; // dev 走测试环境 pro 走生产环境
 
   const SERVER_HOST = {
-    dev: 'http://172.16.117.64:9999/trace',
+    dev: 'https://h5-test.commeal.cn/trace',
     pro: 'https://h-bd.ministudy.com/trace',
   }[window.env];
 
