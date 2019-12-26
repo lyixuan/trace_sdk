@@ -2,7 +2,7 @@
   'use strict';
 
   const SERVER_HOST = {
-    dev :'http://172.16.109.87:28086',
+    dev :'https://h5-test.commeal.cn/inspectorapis',
     pro : 'https://h-bd.ministudy.com/inspectorapis',
   }[window.env];
 
