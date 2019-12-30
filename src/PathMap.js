@@ -233,6 +233,11 @@ const UrlWhiteList = [
     traceUrl: '/inspector/robotPage/trend'
   },
   {
+    widgetName: '会话记录',
+    traceName: '机器人/会话记录',
+    traceUrl: '/inspector/sessionReport/sessionReport'
+  },
+  {
     widgetName: '客诉质检手册',
     traceName: '质检管理/客诉质检手册',
     traceUrl: '/inspector/classQuality/qualityType/1'
